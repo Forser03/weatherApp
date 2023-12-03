@@ -1,7 +1,7 @@
 import requests
 
 city = ("Moscow,RU")
-apiKey = "API key here"
+apiKey = open("apiKey.txt").readline()
 
 weatherJSON = requests.get(f"http://api.openweathermap.org/data/2.5/weather",
                            params={"appid": apiKey, "q": city, "units": "metric", "lang": "ru"}).json()
